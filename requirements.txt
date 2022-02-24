@@ -8,6 +8,11 @@ pandas==1.4.1  # https://pypi.org/project/pandas/1.4.1/  # Powerful data structu
 matplotlib==3.5.1  # https://pypi.org/project/matplotlib/3.5.1/  # Python Plotting package
 seaborn==0.11.2  # https://pypi.org/project/seaborn/0.11.2/  # Statistical Visualization tool
 
+# Modelling
+# ------------------------------------------------------------------------------
+xgboost==1.5.2  # https://pypi.org/project/xgboost/1.5.2/  # XGBoost Python Package
+scikit-learn==1.0.2  # https://pypi.org/project/scikit-learn/1.0.2/  # A set of python modules for machine learning and data mining
+
 # Progress Measurement
 # ------------------------------------------------------------------------------
 tqdm==4.62.3  # https://pypi.org/project/tqdm/4.62.3/  # Fast, Extensible Progress Meter
