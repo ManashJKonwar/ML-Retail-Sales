@@ -1,8 +1,6 @@
 # ML-Retail-Sales
 > This repository helps us to capture retail sales events and provide us forecasted sales. Classical ML algorithms such as xgboost regression is utilized to predict these sales nos.
 
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
-
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
@@ -19,10 +17,8 @@
 <!-- * [License](#license) -->
 
 ## General Information
-- The aim of this repository is to implement Pointnet Architecture on readily available 3d datasets and also to create interactive visualizations in DASH
-- The repository helps Deep Learning enthusiasts to implement pointnet architecture by working on generating training pipeline and inference pipeline separately. It also introduces them to the power of building web interactive apps using DASH as primary framework and also will teach them to structure code around web applications.
-- Understand Pointnet Architecture and develop POC around research papers from main authors of Pointnet Architecture.
-- Implement Pointnet for developing a 3d classifier, 3d part segmenter and 3d semantic segmenter.
+- The aim of this repository is to implement a ML Retail Sales Pipeline which covers vital pointers to capture trends and seasonality in sales data by incorporating Feature Engineering script, Training Script and Inferencing Script.
+- This work will helps Data Science professionals gather knowledge on capturing retail sales and how to approach any such problem statement.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 ![Pointnet Model Architecture](./repo_assets/PointNet_Architecture.jpg)
 
