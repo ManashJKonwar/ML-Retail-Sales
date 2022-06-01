@@ -18,9 +18,18 @@
 
 ## General Information
 - The aim of this repository is to implement a ML Retail Sales Pipeline which covers vital pointers to capture trends and seasonality in sales data by incorporating Feature Engineering script, Training Script and Inferencing Script.
-- This work will helps Data Science professionals gather knowledge on capturing retail sales and how to approach any such problem statement.
+- This work will help Data Science professionals gather knowledge on capturing retail sales and how to approach any such problem statement.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 ![Modelling Flow](./repo_assets/PointNet_Architecture.jpg)
+
+**Flow of Project**:  
+1. **EDA:** EDA covered certain sections such as:
+    a. Data Sourcing  
+    b. Data Cleaning - (Handling Missing Values, Handling Duplicated Values, Handling outliers)  
+    c. Univariate Analysis  
+    d. Bivariate Analysis  
+    e. Multivariate Analysis
+
 
 - Please do refer to the Learn More Sections in each page of the web application to deep dive into each of this case studies.
 
