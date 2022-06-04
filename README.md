@@ -29,9 +29,13 @@
     c. Univariate Analysis  
     d. Bivariate Analysis  
     e. Multivariate Analysis
-
-
-- Please do refer to the Learn More Sections in each page of the web application to deep dive into each of this case studies.
+2. **Pre-Processing:** Following steps are being followed for preprocessing the sales data before feature enginnering part is run  
+    a. Based on unique dates (date_block_num), grid is formed among unique shop ids and item ids.  
+    b. Sales are brought from daily level to montly level aggregation where item count is "summed" and price of an item is "averaged" out.  
+    c. Dataframes obtained from step (a) & (b) are merged together and wherever item count per month is 'NA', they are filled up with 0.  
+    d. item categories are also added to dataframe from step (c).  
+3. **Feature Engineering:** 10 feature engineering steps are compiled together to generate the train ready dataset.  
+    a. 
 
 ## Technologies Used
 - XGBoost
