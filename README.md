@@ -34,8 +34,16 @@
     b. Sales are brought from daily level to montly level aggregation where item count is "summed" and price of an item is "averaged" out.  
     c. Dataframes obtained from step (a) & (b) are merged together and wherever item count per month is 'NA', they are filled up with 0.  
     d. item categories are also added to dataframe from step (c).  
-3. **Feature Engineering:** 10 feature engineering steps are compiled together to generate the train ready dataset.  
-    a. 
+3. **Feature Engineering:** 9 feature engineering steps are compiled together to generate the train ready dataset and if they are used or not.  
+    a. Adding previous item sold for each shop as feature starting from month 1 to month 12. - Groupby (date_block_num) - TRUE
+    b. Adding previous sales for each item as feature starting from month 1 to month 12. - Groupby (date_block_num & item_id) - TRUE  
+    c. Adding previous shop for each item price as feature starting from month 1 to month 12. - Groupby (shop_id & item_id & date_block_num) - TRUE  
+    d. Adding previous item price as feature starting from month 1 to month 12. - Groupby (item_id & date_block_num) - TRUE  
+    e. Mean encodings for shop per item pairs / Mean item counts are extracted for shop item pairs wrt week 32 and 33. - Groupby (shop_id & item_id) - TRUE  
+    f. Mean encodings for item pairs / Mean item counts are extracted wrt week 32 and 33. - Groupby (item_id) - TRUE  
+    g. Month number from last sale of each shop item pair. - FALSE  
+    h. Month number from last sale of each item. - FALSE  
+    i. Utilize top 25 features based on item name. - TRUE  
 
 ## Technologies Used
 - XGBoost
