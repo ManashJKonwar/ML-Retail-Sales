@@ -131,3 +131,4 @@ dmypy.json
 ### extra directories/files ###
 .vscode/*
 datasets/training_datasets/*
+datasets/train_test_datasets_v02/*
