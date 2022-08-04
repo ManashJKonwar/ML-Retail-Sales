@@ -130,5 +130,6 @@ dmypy.json
 
 ### extra directories/files ###
 .vscode/*
+models_outputs/models_essentials_v02/df_xvar.csv
 datasets/train_test_datasets_v01/*
 datasets/train_test_datasets_v02/*
