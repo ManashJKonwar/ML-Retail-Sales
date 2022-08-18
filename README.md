@@ -90,25 +90,27 @@ List the ready features here:
 - Inferencing Script - To Be Started
 
 ## Screenshots
-![Pointnet Classifier Frontend](./repo_assets/Pointnet_Classifier_Frontend.jpeg)
-![Pointnet Part Segmenter Frontend](./repo_assets/Pointnet_Part_Segmenter_Frontend.jpeg)
 
 ## Setup:
-- git clone https://github.com/ManashJKonwar/IP-Pointnet.git (Clone the repository)
-- python3 -m venv IPPointnetVenv (Create virtual environment from existing python3)
-- activate the "IPPointnetVenv" (Activating the virtual environment)
+- git clone https://github.com/ManashJKonwar/ML-Retail-Sales.git (Clone the repository)
+- python3 -m venv MLPricingVenv (Create virtual environment from existing python3)
+- activate the "MLPricingVenv" (Activating the virtual environment)
 - pip install -r requirements.txt (Install all required python modules)
 
 ## Dataset Utilized:
 - Retail Dataset is obtained from Kaggle and competition name is [Predict Future Sales](https://www.kaggle.com/competitions/competitive-data-science-predict-future-sales/data).
-- Please refer to screenshot below for dataset descriptions and data fields within this dataset.
+- Please refer to screenshot below for dataset descriptions and data fields within this dataset.  
 ![Dataset Description / Data Fields](./assets/dataset_description.jpg)
 
 ## Usage
-### For Training PointNet:
-- python train_pointnet.py
-### For Running Web Application:
-- python index.py
+### For EDA, execute this notebook  
+- python preprocessing_pipeline\eda.ipynb
+### For Feature engineering, execute this notebook  
+- python modelling_pipeline\feature_engg_script_v01.ipynb (For Methodology 1)   
+- python modelling_pipeline\feature_engg_script_v02.ipynb (For Methodology 2)
+### For Training, execute this notebook  
+- python modelling_pipeline\training_script_v01.ipynb (For Methodology 1)   
+- python modelling_pipeline\training_script_v02.ipynb (For Methodology 2)
 
 ## Project Status
 Project is: __in progress_ 
@@ -116,23 +118,19 @@ Project is: __in progress_
 
 ## Room for Improvement
 Room for improvement:
-- Build a generic classifier for custom 3d dataset
-- Build a generic part segmenter for custom 3d dataset
-- Build a generic semantic segmenter for custom 3d dataset
-- Develop frontend to encompass this generic nature
-- Porvide support for CPUs, GPUs and TPUs as well
+- Generate sku level lag features
+- Generate sku level price ratios 
+- Build feature selection methodology
+- Build model selection methodology 
 
 To do:
-- Finish developing inference end of part segmenter at DASH end
-- Start developing semantic segmenter
+- Finish developing inferencing scripts/notebooks for both methodologies
 
 ## References
-[1] PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation; Charles R. Qi, Hao Su, Kaichun Mo, Leonidas J. Guibas;
-CVPR 2017; https://arxiv.org/abs/1612.00593.
+[1] 
 
-## Acknowledgements
-- This project was based on [Point cloud classification with PointNet](https://keras.io/examples/vision/pointnet/).
-- This project was based on [Point cloud segmentation with PointNet](https://keras.io/examples/vision/pointnet_segmentation/).
+## Acknowledgements  
+-
 
 ## Contact
 Created by [@ManashJKonwar](https://github.com/ManashJKonwar) - feel free to contact me!
