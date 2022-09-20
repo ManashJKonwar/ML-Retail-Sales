@@ -1,22 +1,45 @@
 # ML-Retail-Sales
 > This repository helps us to capture retail sales events and provide us forecasted sales. Classical ML algorithms such as xgboost regression is utilized to predict these demand nos. There are methodologies which plays vital roles in generating these models such as product category level seasonality, cannibalistic price ratios and lags at product category level, trend featrues, etc.
 
-## Table of Contents
-* [General Info](#general-information)
+## **Table of Contents**  
+* [Demand Forecasting](#demand-forecasting)
+* [Project Flow](#project-flow)  
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Dataset Utilized](#dataset-utilized)
 * [Usage](#usage)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [References](#references)
-* [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
-## General Information
+## **Demand Forecasting**  
+It is the process of predicting what the demand for certain products will be in the future. This helps manufacturers to decide what they should produce and guides retailers toward what they should stock for days to come.  
+
+It focussess mainly on following processes:  
+- Supplier relationship management  
+- Customer relatonship management  
+- Order fulfillment and logistics  
+- Marketing campaigns  
+- Manufacturing flow management
+
+### **Why Demand Forecasting using ML?**  
+![Demand Forecasting](./assets/demand_forecasting_techniques.jpg)  
+
+There are quantitative and qualitative demand assessment methods. The above-listed traditional sales forecasting methods have been tried and tested for decades. With Artificial Intelligence development, they are now upgraded by modern forecasting methods using Machine Learning (ML).
+
+Machine learning techniques allows for predicting the amount of products/services to be purchased during a defined future period. In this case, a software system can learn from data for improved analysis. Compared to traditional demand forecasting methods, a machine learning approach allows you to:
+- Accelerate data processing speed
+- Provide a more accurate forecast
+- Automate forecast updates based on the recent data
+- Analyze more data
+- Identify hidden patterns in data
+- Create a robust system
+- Increase adaptability to changes
+
+## **General Information**
 - The aim of this repository is to implement a ML Retail Sales Pipeline which covers vital pointers to capture trends, seasonality, pricing ratios, pricing lags, etc in sales data by incorporating Feature Engineering script, Training Script and Inferencing Script.
 - This work will help Data Science professionals gather knowledge on capturing retail based events and provide an idea on to how you can approach any ML based approach for capturing business insights from retail point of sales (POS) data.  
 - The code based could be further improved to feature engineer other interaction level features so as to capture excise duty changes, weather information, customer profiling data (geographics, professional details, demographics, etc), product distribution data.
@@ -78,31 +101,29 @@ The EDA remains same for both approaches however pre-processing, feature enginee
     d. Adding price lags, extracting price lags for 1, 4, 12 and 24 weeks for each item sold from each shop. - Groupby (shop_id & item_id & week_start_date) - TRUE  
     e. Adding seasonality index, 
 
-## Technologies Used
+## **Technologies Used**
 - XGBoost
 - Python 
 
-## Features
+## **Features**
 List the ready features here:
 - Exploratory Data Analysis (EDA) Script - Done
 - Feature Engineering Script - Done
 - Modelling Script - Done
 - Inferencing Script - To Be Started
 
-## Screenshots
-
-## Setup:
+## **Setup**
 - git clone https://github.com/ManashJKonwar/ML-Retail-Sales.git (Clone the repository)
 - python3 -m venv MLPricingVenv (Create virtual environment from existing python3)
 - activate the "MLPricingVenv" (Activating the virtual environment)
 - pip install -r requirements.txt (Install all required python modules)
 
-## Dataset Utilized:
+## **Dataset Utilized**
 - Retail Dataset is obtained from Kaggle and competition name is [Predict Future Sales](https://www.kaggle.com/competitions/competitive-data-science-predict-future-sales/data).
 - Please refer to screenshot below for dataset descriptions and data fields within this dataset.  
 ![Dataset Description / Data Fields](./assets/dataset_description.jpg)
 
-## Usage
+## **Usage**
 ### For EDA, execute this notebook  
 - python preprocessing_pipeline\eda.ipynb
 ### For Feature engineering, execute this notebook  
@@ -112,11 +133,11 @@ List the ready features here:
 - python modelling_pipeline\training_script_v01.ipynb (For Methodology 1)   
 - python modelling_pipeline\training_script_v02.ipynb (For Methodology 2)
 
-## Project Status
+## **Project Status**
 Project is: __in progress_ 
 <!-- / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why._ -->
 
-## Room for Improvement
+## **Room for Improvement**
 Room for improvement:
 - Generate sku level lag features
 - Generate sku level price ratios 
@@ -126,13 +147,10 @@ Room for improvement:
 To do:
 - Finish developing inferencing scripts/notebooks for both methodologies
 
-## References
-[1] 
+## **References**
+[1] https://mobidev.biz/blog/machine-learning-methods-demand-forecasting-retail
 
-## Acknowledgements  
--
-
-## Contact
+## **Contact**
 Created by [@ManashJKonwar](https://github.com/ManashJKonwar) - feel free to contact me!
 
 <!-- Optional -->
