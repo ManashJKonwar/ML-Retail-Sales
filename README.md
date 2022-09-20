@@ -21,7 +21,7 @@
 - This work will help Data Science professionals gather knowledge on capturing retail based events and provide an idea on to how you can approach any ML based approach for capturing business insights from retail point of sales (POS) data.  
 - The code based could be further improved to feature engineer other interaction level features so as to capture excise duty changes, weather information, customer profiling data (geographics, professional details, demographics, etc), product distribution data.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-![Modelling Flow](./repo_assets/PointNet_Architecture.jpg)
+![Modelling Flow](./assets/ml_project_lifecycle.jpg)
 
 **Flow of Project**:  
 The most unique section of this repository is how the feature engineering and traning scripts have been bifurcated to 2 separate versions -   
