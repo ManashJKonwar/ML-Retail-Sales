@@ -2,7 +2,9 @@
 > This repository helps us to capture retail sales events and provide us forecasted sales. Classical ML algorithms such as xgboost regression is utilized to predict these demand nos. There are methodologies which plays vital roles in generating these models such as product category level seasonality, cannibalistic price ratios and lags at product category level, trend featrues, etc.
 
 ## **Table of Contents**  
-* [Demand Forecasting](#demand-forecasting)
+* [General Information](#general-information)  
+  * [Demand Forecasting](#demand-forecasting)
+  * [Why Demand Forecasting using ML?](#why-demand-forecasting-using-ml)  
 * [Project Flow](#project-flow)  
 * [Technologies Used](#technologies-used)
 * [Features](#features)
@@ -15,7 +17,13 @@
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
-## **Demand Forecasting**  
+## **General Information**
+- The aim of this repository is to implement a ML Retail Sales Pipeline which covers vital pointers to capture trends, seasonality, pricing ratios, pricing lags, etc in sales data by incorporating Feature Engineering script, Training Script and Inferencing Script.
+- This work will help Data Science professionals gather knowledge on capturing retail based events and provide an idea on to how you can approach any ML based approach for capturing business insights from retail point of sales (POS) data.  
+- The code based could be further improved to feature engineer other interaction level features so as to capture excise duty changes, weather information, customer profiling data (geographics, professional details, demographics, etc), product distribution data.
+<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
+### **Demand Forecasting**  
 It is the process of predicting what the demand for certain products will be in the future. This helps manufacturers to decide what they should produce and guides retailers toward what they should stock for days to come.  
 
 It focussess mainly on following processes:  
@@ -39,14 +47,8 @@ Machine learning techniques allows for predicting the amount of products/service
 - Create a robust system
 - Increase adaptability to changes
 
-## **General Information**
-- The aim of this repository is to implement a ML Retail Sales Pipeline which covers vital pointers to capture trends, seasonality, pricing ratios, pricing lags, etc in sales data by incorporating Feature Engineering script, Training Script and Inferencing Script.
-- This work will help Data Science professionals gather knowledge on capturing retail based events and provide an idea on to how you can approach any ML based approach for capturing business insights from retail point of sales (POS) data.  
-- The code based could be further improved to feature engineer other interaction level features so as to capture excise duty changes, weather information, customer profiling data (geographics, professional details, demographics, etc), product distribution data.
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+## **Project Flow**:  
 ![Modelling Flow](./assets/ml_project_lifecycle.jpg)
-
-**Flow of Project**:  
 The most unique section of this repository is how the feature engineering and traning scripts have been bifurcated to 2 separate versions -   
 
 a. The first version [feature engineering script](./modelling_pipeline/feature_engg_script_v01.ipynb) and [training script](./modelling_pipeline/training_script_v01.ipynb) are developed in such a way that at the end we have only one model for the entire data and the training data is very extensive in nature.  
@@ -74,15 +76,15 @@ The EDA remains same for both approaches however pre-processing, feature enginee
 3. **Feature Engineering (Approach 1):**  
     
     9 feature engineering steps are compiled together to generate the train ready dataset and if they are used or not: 
-    a. Adding previous item sold for each shop as feature starting from month 1 to month 12. - Groupby (date_block_num) - TRUE
-    b. Adding previous sales for each item as feature starting from month 1 to month 12. - Groupby (date_block_num & item_id) - TRUE  
-    c. Adding previous shop for each item price as feature starting from month 1 to month 12. - Groupby (shop_id & item_id & date_block_num) - TRUE  
-    d. Adding previous item price as feature starting from month 1 to month 12. - Groupby (item_id & date_block_num) - TRUE  
-    e. Mean encodings for shop per item pairs / Mean item counts are extracted for shop item pairs wrt week 32 and 33. - Groupby (shop_id & item_id) - TRUE  
-    f. Mean encodings for item pairs / Mean item counts are extracted wrt week 32 and 33. - Groupby (item_id) - TRUE  
-    g. Month number from last sale of each shop item pair. - FALSE  
-    h. Month number from last sale of each item. - FALSE  
-    i. Utilize top 25 features based on item name. - TRUE  
+    a. Adding previous item sold for each shop as feature starting from month 1 to month 12. - Groupby (date_block_num) - ✅  
+    b. Adding previous sales for each item as feature starting from month 1 to month 12. - Groupby (date_block_num & item_id) - ✅  
+    c. Adding previous shop for each item price as feature starting from month 1 to month 12. - Groupby (shop_id & item_id & date_block_num) - ✅  
+    d. Adding previous item price as feature starting from month 1 to month 12. - Groupby (item_id & date_block_num) - ✅  
+    e. Mean encodings for shop per item pairs / Mean item counts are extracted for shop item pairs wrt week 32 and 33. - Groupby (shop_id & item_id) - ✅  
+    f. Mean encodings for item pairs / Mean item counts are extracted wrt week 32 and 33. - Groupby (item_id) - ✅  
+    g. Month number from last sale of each shop item pair. - 🔶  
+    h. Month number from last sale of each item. - 🔶  
+    i. Utilize top 25 features based on item name. - ✅  
 
 4. **Pre-Processing (Approach 2):**  
 
@@ -95,11 +97,13 @@ The EDA remains same for both approaches however pre-processing, feature enginee
 5. **Feature Engineering (Approach 2):**  
 
     7 feature engineering steps are compiled together for each parent category to generate the train ready dataset and if they are used or not:  
-    a. Adding shop level feature, extracting total no of items sold from each shop for each category. - Groupby (shop_id & item_category_id & week_start_date) - TRUE  
-    b. Adding shop level feature, extracting mean price of each category sold from each shop. - Groupby (shop_id & item_category_id & week_start_date) - TRUE  
-    c. Adding price lags, extracting price lags for 1, 4, 12 and 24 weeks for each item. - Groupby (item_id & week_start_date) - TRUE  
-    d. Adding price lags, extracting price lags for 1, 4, 12 and 24 weeks for each item sold from each shop. - Groupby (shop_id & item_id & week_start_date) - TRUE  
-    e. Adding seasonality index, 
+    a. Adding shop level feature, extracting total no of items sold from each shop for each category. - Groupby (shop_id & item_category_id & week_start_date) - ✅  
+    b. Adding shop level feature, extracting mean price of each category sold from each shop. - Groupby (shop_id & item_category_id & week_start_date) - ✅  
+    c. Adding price lags, extracting price lags for 1, 4, 12 and 24 weeks for each item. - Groupby (item_id & week_start_date) - ✅  
+    d. Adding price lags, extracting price lags for 1, 4, 12 and 24 weeks for each item sold from each shop. - Groupby (shop_id & item_id & week_start_date) - ✅  
+    e. Adding seasonality index for each category at monthly level - ✅  
+    f. Adding parent category level price ratios at weekly level - ✅  
+    g. Adding item category level price ratios at weekly level - ✅
 
 ## **Technologies Used**
 - XGBoost
